@@ -1,4 +1,4 @@
-package com.javaEasy.model;
+package com.java.easy.model;
 
 public class Employee {
 

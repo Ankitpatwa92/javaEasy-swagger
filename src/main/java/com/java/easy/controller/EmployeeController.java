@@ -1,4 +1,4 @@
-package com.javaEasy.controller;
+package com.java.easy.controller;
 
 import java.util.Arrays;
 import java.util.List;
@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.javaEasy.model.Employee;
+
+import com.java.easy.model.Employee;
 
 @RestController
 @RequestMapping(value="employee")
