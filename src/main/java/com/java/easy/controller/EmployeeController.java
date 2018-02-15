@@ -3,6 +3,8 @@ package com.java.easy.controller;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.naming.LimitExceededException;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,16 +27,16 @@ public class EmployeeController {
 	}
 
 	@RequestMapping(value ="saveEmployee", method = RequestMethod.PUT)
-	public String saveEmployee(@RequestBody Employee employee) throws Exception {
+	public String saveEmployee(@RequestBody Employee employee) throws LimitExceededException {
 		System.out.println("saveEmployee " + employee);
 		if (employee.getId() > 500) {
-			throw new Exception("Employee Id limit excedeed");
+			throw new LimitExceededException("Employee Id limit excedeed");
 		}
 		return "SUCCESS";
 	}
 
 	@RequestMapping(value = "deleteEmployee/{empId}", method = RequestMethod.DELETE)
-	public String deleteEmployee(@PathVariable("empId") Integer empId) throws Exception {
+	public String deleteEmployee(@PathVariable("empId") Integer empId)  {
 		System.out.println("in deleteEmployee" + empId);
 		return "Employee deleted successfully";
 	}
