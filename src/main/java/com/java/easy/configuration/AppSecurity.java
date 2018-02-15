@@ -1,4 +1,4 @@
-package com.javaEasy.configuration;
+package com.java.easy.configuration;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
