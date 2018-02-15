@@ -2,13 +2,13 @@ package com.java.easy.model;
 
 public class Employee {
 
-	Integer Id;
+	private Integer Id;
 	
-	String name;
+	private String name;
 	
-	String address;
+	private String address;
 	
-	String salary;
+	private String salary;
 
 	
 	
